@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple CRUD in Django</title>
+</head>
+<body>
+
+    <br><br>
+    <form action="" method="post">
+        <!--
+            this csrf token is a security feature of Django,
+            which must always be included at the top of the <form> tag
+        -->
+        {% csrf_token %}
+
+        <!--
+            this is the Django code for inserting variables passed to HTML templates,
+            in this case the form elements
+        -->
+        {{ form.as_p }}
+
+        <p><input type="submit" value="Create"/></p>
+        <br>
+
+        <!-- here we reference the status variable which is passed in the context dictionary -->
+        <p>Status: {{ status }}</p>
+
+    </form>
+</body>
+</html>

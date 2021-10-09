@@ -1,0 +1,8 @@
+# mysql.cnf
+[client]
+database = sample_db
+user = myuser
+password = 1234567890
+host = localhost
+port = 3306
+default-character-set = utf8
